@@ -1,0 +1,64 @@
+
+<%= link_to 'View History', history_parking_list_path(@current_parker) %>
+
+
+
+
+<%- if @parking_list.errors.size > 0 -%>
+
+  <ul class="errors">
+    <%- @parking_list.errors.full_messages.each do |message| -%>
+      <li><%= message %></li>
+    <%- end -%>
+  </ul>
+
+<%- end -%>
+
+
+
+
+<%= @spot_from_yesterday %>
+
+<%= form_for @parking_list do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br>
+
+    <%- if @current_email.nil? -%>
+    <%= f.email_field :email %>
+    <%- else -%>
+    <%= f.email_field :email, value: @current_email %>
+    <%- end -%>
+    
+  </div>
+
+  <div class="field">
+    <%= f.label :spot_number %><br>
+
+    <%- if @current_spot.nil? -%>
+    <%= f.number_field :spot_number %>
+    <%- else -%>
+    <%= f.number_field :spot_number, value: @current_spot %>
+    <%- end -%>
+
+  </div>
+  
+  <div class="actions">
+ <%= f.submit 'Register' %>
+  </div>
+ 
+<%- end -%>
+
+
+
+
+

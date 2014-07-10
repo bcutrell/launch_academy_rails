@@ -1,0 +1,41 @@
+<%=  @current_email  %>
+
+
+
+<div class = "party">
+<a href="http://www.youtube.com/watch?v=mZPZkG_zY0s">Join the Party!</a>
+</div>
+
+
+<div class="index_title">
+<h1>Welcome to the parking lot</h1>
+</div>
+
+<div class="index_button">
+<%= link_to 'New parking registration', new_parking_list_path %>
+</div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th class = "header"> First name </th>
+      <th class = "header"> Last name </th>
+      <th class = "header"> Email </th>
+      <th class = "header"> Spot number</th>
+      <th class = "header"> Date </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parking_list.each do |parker| %>
+      <tr>
+        <td class="info"><%= parker.first_name %></td>
+        <td class="info"><%=  parker.last_name %></td>
+        <td class="info"><%=  parker.email %></td>
+        <td class="info"><%=  parker.spot_number %></td>
+        <td class="info"><%=  parker.parked_on %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

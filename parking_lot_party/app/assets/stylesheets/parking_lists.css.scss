@@ -1,0 +1,98 @@
+// Place all the styles related to the parking_lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*
+{
+  background-color: #3498db
+}
+
+.party
+{
+font-size: 20px;
+font-family: sans-serif;
+text-align: center;
+padding: 40px
+}
+
+div.field_with_errors {
+  display: inline;
+}
+
+.field
+{
+  padding-top: 10px;
+  font-family: sans-serif;
+}
+
+input
+{
+  background-color: pink;
+}
+
+
+.errors
+{
+  border: 2px solid red;
+
+}
+
+.errors li 
+{
+  padding:5px;
+  text-align: center;
+  list-style-type: none;
+  font-family: impact;
+}
+
+.success
+{
+  text-align: center;
+  font-family: impact;
+  font: blue
+}
+
+.index_title
+{
+font-family: sans-serif;
+font-size: 40px;
+text-align: center;
+color: yellow
+}
+
+.index_button
+{
+font-size: 20px;
+font-family: sans-serif;
+text-align: center;
+padding: 40px
+}
+
+
+table 
+{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+th, td 
+{
+  padding: 7px 10px 10px 10px;
+}
+
+.header 
+{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size:90%;
+  border-bottom: 2px solid #111111;
+  border-top: 1px solid #999;
+  text-align: center;
+}
+
+
+.info
+{
+  background-color: #efefef;
+  font-family: sans-serif;
+}

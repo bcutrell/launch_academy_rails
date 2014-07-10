@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SlackerNews</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navigation-container">
+ <ul class="nav">
+   <span class="img">B</span>
+   <li id="site_name"><strong>Slacker News</strong></li>
+   <span class="borderlines">
+   <li>new</li>
+   <li>comments</li>
+   <li>ask</li>
+   <li>jobs</li>
+ </span>
+   <li>submit</li>
+   <li class="login">login</li>
+ </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+<%= yield %>
+
+</body>
+</html>

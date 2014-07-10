@@ -1,0 +1,41 @@
+
+
+<div class="hero-unit">
+  <h1>Welcome to the Food Recorder</h1>
+
+  <p> Record your food! </p>
+
+<%= link_to 'New Food Item', new_food_item_path, :class => 'btn btn-primary' %>
+
+</div>
+
+
+<div class="index_image">
+<img src="http://www.citysweettooth.com/wp-content/uploads/2009/03/irfsnormlove.jpg" >
+</div>
+
+<h1>Food Items</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @food_items.each do |food_item| %>
+      <tr>
+        <td><%= food_item.id %></td>
+        <td><%= link_to food_item.title, food_item_path(food_item) %></td>
+        <td><%= food_item.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_food_item_path(food_item), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', food_item_path(food_item), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

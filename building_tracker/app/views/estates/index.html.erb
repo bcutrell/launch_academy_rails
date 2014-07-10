@@ -1,0 +1,83 @@
+<div class="hero-unit">
+  <h1>Hello.</h1>
+
+  <div class="row">
+    <div class="span4">
+      <p>Record Real Estate</p>
+      <%= link_to 'New Estate', new_estate_path, :class => 'btn btn-primary' %>
+    </div>
+    <div class="span4">
+      <p>Record Owners</p>
+      <%= link_to 'New Owner', new_owner_path, :class => 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span4">.
+    <img src="http://4.bp.blogspot.com/_WelAJPz3LaI/S-Q1eTV433I/AAAAAAAAAmY/UMQCYVAUPCc/s1600/Blog+House+Lawrence+3.jpg" class="img-circle">
+  </div>
+  <div class="span4">
+    <img src="http://taxreductionprofessionals.com/wp-content/uploads/2011/12/Pretty-House1.gif" class="img-circle">
+  </div>
+  <div class="span4">
+    <img src="http://cdn.trendhunterstatic.com/thumbs/the-pretty-house.jpeg" class="img-circle">
+  </div>
+</div>
+
+<h1>Estates</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Postal code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @estates.each do |estate| %>
+    <tr>
+      <td><%= estate.owner_name %></td>
+      <td><%= estate.street_address %></td>
+      <td><%= estate.city %></td>
+      <td><%= estate.state %></td>
+      <td><%= estate.postal_code %></td>
+      <td>
+        <%= link_to 'Edit', edit_estate_path(estate), :class => 'btn btn-mini' %>
+        <%= link_to 'Destroy', estate_path(estate), :method => :delete, confirm: 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Owners</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Company</th>
+      <th>Estates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @owners.each do |owner| %>
+    <tr>
+      <td><%= owner.first_name %></td>
+      <td><%= owner.last_name %></td>
+      <td><%= owner.email %></td>
+      <td><%= owner.company %></td>
+      <td><%= owner.estate_names %></td>
+
+      <td>
+        <%= link_to 'Edit', edit_owner_path(owner), :class => 'btn btn-mini' %>
+        <%= link_to 'Destroy', owner_path(owner), :method => :delete, confirm: 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,32 @@
+.main-container {
+ padding: 0px;
+
+}
+
+.post_name 
+{
+ color: black; 
+ font-size: 1em;
+ margin-left: 15px;
+ padding-bottom: 0;
+}
+
+.comment_stats {
+ margin-left: 20px;
+ padding-top: 0;
+}
+
+.comment-box {
+ display: block;
+ margin-top: 15px;
+ margin-left: 15px;
+}
+
+textarea {
+ width: 400px;
+ height: 200px;
+}
+
+ul {
+ list-style-image: url(https://news.ycombinator.com/grayarrow.gif);
+}

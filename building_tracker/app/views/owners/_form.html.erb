@@ -1,0 +1,15 @@
+<%= simple_form_for @owner, :html => { :class => 'form-horizontal' } do |f| %>
+<fieldset>
+  <legend><%= controller.action_name.capitalize %> Owner</legend>
+
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :company %>
+
+  <div class="form-actions">
+    <%= f.submit 'Add Owner', :class => 'btn btn-primary' %>
+    <%= link_to 'Cancel', estates_path, :class => 'btn' %>
+  </div>
+</fieldset>
+<% end %>

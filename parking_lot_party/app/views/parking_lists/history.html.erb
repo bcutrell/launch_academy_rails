@@ -1,0 +1,28 @@
+<% if @history != nil  %>
+<h1> Your Parking History </h1>
+<table>
+  <thead>
+    <tr>
+      <th class = "header"> First name </th>
+      <th class = "header"> Last name </th>
+      <th class = "header"> Email </th>
+      <th class = "header"> Spot number</th>
+      <th class = "header"> Date </th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @history.each do |parker| %>
+      <tr>
+        <td class="info"><%= parker.first_name %></td>
+        <td class="info"><%=  parker.last_name %></td>
+        <td class="info"><%=  parker.email %></td>
+        <td class="info"><%=  parker.spot_number %></td>
+        <td class="info"><%=  parker.parked_on %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%- end -%>
